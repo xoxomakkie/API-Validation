@@ -1,0 +1,48 @@
+{
+  "type": "object",
+  "properties": {
+    "isbn": {
+      "type": "string",
+      "minLength": 1,
+      "description": "ISBN of the book"
+    },
+    "amazon_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Amazon URL for the book"
+    },
+    "author": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Author of the book"
+    },
+    "language": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Language of the book"
+    },
+    "pages": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Number of pages in the book"
+    },
+    "publisher": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Publisher of the book"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Title of the book"
+    },
+    "year": {
+      "type": "integer",
+      "minimum": 1000,
+      "maximum": 2025,
+      "description": "Publication year"
+    }
+  },
+  "additionalProperties": false,
+  "required": ["isbn", "author", "language", "pages", "publisher", "title", "year"]
+}
